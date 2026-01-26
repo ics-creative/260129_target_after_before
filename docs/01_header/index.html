@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_目次</title>
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="nav">
+      <ol class="nav__list">
+        <li class="nav__item"><a href="#intro" class="nav__link">概要</a></li>
+        <li class="nav__item"><a href="#target-after" class="nav__link">:target-afterとは</a></li>
+        <li class="nav__item"><a href="#target-before" class="nav__link">:target-beforeとは</a></li>
+        <li class="nav__item"><a href="#no-js" class="nav__link">CSSのみで動く</a></li>
+        <li class="nav__item"><a href="#browser-support" class="nav__link">ブラウザサポート</a></li>
+      </ol>
+    </nav>
+
+    <main class="main">
+      <div class="unsupported-message">
+        このブラウザは :target-before / :target-after
+        に対応していません。ChromeまたはEdgeの135以上で確認してください。
+      </div>
+      <section id="intro" class="chapter">
+        <h1 class="chapter__title">概要</h1>
+        <div class="chapter__content">
+          <p>
+            このデモはCSSの疑似クラス<code>:target-before</code>、<code>:target-after</code>、
+            <code>:target-current</code>を使用した
+            ヘッダーの実装例です。ページをスクロールしてヘッダーのスタイルが変化するのを確認してみてください。
+          </p>
+          <p>
+            <code>scroll-target-group</code>プロパティをナビゲーションのリストに設定すると
+            <code>:target-current</code>、<code>:target-before</code>、<code>:target-after</code>
+            疑似クラスが使えるようになります。
+          </p>
+        </div>
+      </section>
+
+      <section id="target-after" class="chapter">
+        <h2 class="chapter__title">:target-afterとは</h2>
+        <div class="chapter__content">
+          <p>
+            <code>:target-after</code>疑似クラスは、現在のアクティブな要素（
+            <code>:target-current</code>）よりも
+            後ろにある要素に対する疑似クラスです。つまり、ユーザーがまだ閲覧していないセクションに対応するリンクをスタイリングできます。
+          </p>
+          <p>このデモでは、未読のセクションを明るい紫色と下線で表示しています。</p>
+        </div>
+      </section>
+
+      <section id="target-before" class="chapter">
+        <h2 class="chapter__title">:target-beforeとは</h2>
+        <div class="chapter__content">
+          <p>
+            <code>:target-before</code>疑似クラスは、現在のアクティブな要素（
+            <code>:target-current</code>）よりも前にある要素に対する疑似クラスです。
+            これにより、ユーザーがすでに通過したセクションを視覚的に区別できます。
+          </p>
+          <p>このデモでは、通過済みのセクションをグレー色で表示しています。</p>
+        </div>
+      </section>
+
+      <section id="no-js" class="chapter">
+        <h2 class="chapter__title">CSSのみで動く</h2>
+        <div class="chapter__content">
+          <p>
+            今まではスクロール追従ナビゲーションを実装するには、JavaScriptを組み合わせて実装する必要がありました。
+          </p>
+          <p>
+            CSSの<code>:target-before</code>、<code>:target-after</code>
+            を使用することで、これらの処理がすべてブラウザ側で行われます。
+          </p>
+        </div>
+      </section>
+
+      <section id="browser-support" class="chapter">
+        <h2 class="chapter__title">ブラウザサポート</h2>
+        <div class="chapter__content">
+          <p>これらの疑似クラスはChrome、Edge135以降で利用可能です。</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

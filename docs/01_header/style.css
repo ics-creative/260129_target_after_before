@@ -1,0 +1,81 @@
+/* ナビゲーション */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+  padding: 16px 0;
+  /* scroll-target-groupプロパティをナビゲーションのリストに設定することで、ブラウザがスクロール位置に基づいて:target-current、:target-before、:target-after疑似クラスを自動的に判定します。 */
+  scroll-target-group: auto;
+}
+
+.nav__link {
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 4px 0;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  text-decoration: underline;
+}
+
+/* :target-* 疑似クラス */
+.nav__link:target-current {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.nav__link:target-before {
+  color: var(--color-text-muted);
+}
+
+.nav__link:target-after {
+  color: var(--color-secondary);
+}
+
+.main {
+  max-width: 640px;
+  padding: 120px 0;
+  display: grid;
+}
+
+.chapter {
+  padding: 80px 0;
+}
+
+.chapter__title {
+  font-size: 28px;
+  margin-bottom: 36px;
+  color: var(--color-primary);
+}
+
+.chapter__content {
+  display: grid;
+  gap: 16px;
+}
+
+/* 非対応ブラウザ向け警告 */
+.unsupported-message {
+  padding: 16px;
+  background: #ffcd33;
+}
+
+@supports selector(:target-before) {
+  .unsupported-message {
+    display: none;
+  }
+}
