@@ -27,7 +27,11 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "correctness": {
+        "noUnknownProperty": "off",
+        "noUnknownPseudoClass": "off"
+      }
     }
   },
   "javascript": {
@@ -46,7 +50,7 @@
   },
   "overrides": [
     {
-      "includes": ["node_modules/**", "docs/**"],
+      "includes": ["node_modules/**"],
       "formatter": {
         "enabled": false
       },
