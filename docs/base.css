@@ -34,3 +34,8 @@ code {
   border-radius: 4px;
   font-family: monospace;
 }
+
+li,
+ol {
+  list-style: none;
+}
