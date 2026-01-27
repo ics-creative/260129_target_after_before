@@ -101,3 +101,19 @@ nav ol {
   color: var(--color-secondary);
 }
 ```
+
+## 禁止プロパティ
+
+- **box-shadow** は明示的な指示がない限り使用しない
+
+```css
+/* NG */
+.nav {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* OK - box-shadowは使用しない */
+.nav {
+  border-bottom: 1px solid var(--color-border);
+}
+```

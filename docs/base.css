@@ -39,3 +39,11 @@ li,
 ol {
   list-style: none;
 }
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
