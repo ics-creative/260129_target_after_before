@@ -46,10 +46,12 @@ body {
   gap: 2px;
   justify-items: center;
 
+  /* 現在表示中 */
   &:has(.nav__link:target-current) {
     border-bottom: 1px solid var(--color-border);
   }
 
+  /* スクロールの「後」（未到達） */
   &:has(.nav__link:target-after) {
     border-bottom: 1px solid var(--color-border);
   }
