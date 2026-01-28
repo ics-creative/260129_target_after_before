@@ -4,7 +4,7 @@ ICS MEDIA『JS不要で進捗UIが作れるCSSの:target-afterと:target-before�
 
 1. [簡単なサンプル](https://ics-creative.github.io/260129_target_after_before/00_example/)
 2. [目次](https://ics-creative.github.io/260129_target_after_before/01_header/)
-3. [進捗UI](https://ics-creative.github.io/260129_target_after_before/02_progress/)
+3. [進捗を表示](https://ics-creative.github.io/260129_target_after_before/02_progress/)
 4. [横スクロールと組み合わせた例](https://ics-creative.github.io/260129_target_after_before/03_horizontal/)
 
 ## 使用したアイコン画像

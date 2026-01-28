@@ -14,7 +14,7 @@ body {
 }
 
 .list {
-  /* スクロールマーカーグループコンテナーの設定 */
+  /* グループ化 */
   scroll-target-group: auto;
   display: grid;
   gap: 12px;
