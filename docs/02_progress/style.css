@@ -15,17 +15,22 @@
 
 .progress__item {
   position: relative;
-}
 
-.progress__item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 24px;
-  left: 27px;
-  width: 1px;
-  height: 0;
-  background-color: var(--color-border);
-  transition: height 0.2s ease;
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 27px;
+    width: 1px;
+    height: 0;
+    background-color: var(--color-border);
+    transition: height 0.2s ease;
+  }
+
+  /* step間の縦線を表示 */
+  &:has(.progress__link:target-before)::after {
+    height: 100%;
+  }
 }
 
 .progress__link {
@@ -38,6 +43,39 @@
   position: relative;
   padding-bottom: 36px;
   color: var(--color-text);
+
+  /* スクロールの「前」（通過済み） */
+  &:target-before {
+    color: var(--color-text-muted);
+
+    /* ✔️アイコンを表示 */
+    > .progress__text::after {
+      content: "✔️";
+      position: absolute;
+      top: 0;
+      right: -18px;
+    }
+
+    > .progress__badge {
+      color: var(--color-text-muted);
+    }
+  }
+
+  /* 現在表示中 */
+  &:target-current {
+    color: var(--color-primary);
+
+    > .progress__badge {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border-color: transparent;
+    }
+  }
+
+  /* スクロールの「後」（未到達） */
+  &:target-after {
+    color: var(--color-text);
+  }
 }
 
 .progress__badge {
@@ -59,43 +97,6 @@
 
 .progress__time {
   font-size: 12px;
-}
-
-/* スクロールの「前」（通過済み） */
-.progress__link:target-before {
-  color: var(--color-text-muted);
-
-  /* ✔️アイコンを表示 */
-  > .progress__text::after {
-    content: "✔️";
-    position: absolute;
-    top: 0;
-    right: -18px;
-  }
-
-  > .progress__badge {
-    color: var(--color-text-muted);
-  }
-}
-/* step間の縦線を表示 */
-.progress__item:has(.progress__link:target-before)::after {
-  height: 100%;
-}
-
-/* 現在表示中 */
-.progress__link:target-current {
-  color: var(--color-primary);
-
-  > .progress__badge {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border-color: transparent;
-  }
-}
-
-/* スクロールの「後」（未到達） */
-.progress__link:target-after {
-  color: var(--color-text);
 }
 
 .recipe-main {

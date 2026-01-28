@@ -45,6 +45,14 @@ body {
   display: grid;
   gap: 2px;
   justify-items: center;
+
+  &:has(.nav__link:target-current) {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  &:has(.nav__link:target-after) {
+    border-bottom: 1px solid var(--color-border);
+  }
 }
 
 .nav__link {
@@ -52,27 +60,18 @@ body {
   color: var(--color-text);
   font-size: 16px;
   padding: 4px 16px;
-}
 
-/* スクロールの「前」（通過済み） */
-.nav__link:target-before {
-  color: var(--color-text-muted);
-}
+  /* スクロールの「前」（通過済み） */
+  &:target-before {
+    color: var(--color-text-muted);
+  }
 
-/* 現在表示中 */
-.nav__link:target-current {
-  color: var(--color-primary);
-  /* 現在表示中の要素をアンカーとして指定。バスのアイコンを移動させる */
-  anchor-name: --current-city;
-}
-
-.nav__item:has(.nav__link:target-current) {
-  border-bottom: 1px solid var(--color-border);
-}
-
-/* スクロールの「後」（未到達） */
-.nav__item:has(.nav__link:target-after) {
-  border-bottom: 1px solid var(--color-border);
+  /* 現在表示中 */
+  &:target-current {
+    color: var(--color-primary);
+    /* 現在表示中の要素をアンカーとして指定。バスのアイコンを移動させる */
+    anchor-name: --current-city;
+  }
 }
 
 .main {

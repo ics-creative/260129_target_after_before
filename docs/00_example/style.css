@@ -18,22 +18,22 @@ body {
   scroll-target-group: auto;
   display: grid;
   gap: 12px;
-}
 
-/* スクロールの「前」（通過済み） */
-.list a:target-before {
-  color: #999;
-}
+  /* スクロールの「前」（通過済み） */
+  & a:target-before {
+    color: #999;
+  }
 
-/* 現在表示中 */
-.list a:target-current {
-  color: #0066cc;
-  font-weight: bold;
-}
+  /* 現在表示中 */
+  & a:target-current {
+    color: #0066cc;
+    font-weight: bold;
+  }
 
-/* スクロールの「後」（未到達） */
-.list a:target-after {
-  color: #333;
+  /* スクロールの「後」（未到達） */
+  & a:target-after {
+    color: #333;
+  }
 }
 
 .main {

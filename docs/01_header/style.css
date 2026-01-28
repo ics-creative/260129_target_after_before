@@ -29,22 +29,22 @@
   transition:
     color 0.3s,
     text-decoration 0.3s;
-}
 
-/* スクロールの「前」（通過済み） */
-.nav__link:target-before {
-  color: var(--color-text-muted);
-}
+  /* スクロールの「前」（通過済み） */
+  &:target-before {
+    color: var(--color-text-muted);
+  }
 
-/* 現在表示中 */
-.nav__link:target-current {
-  color: var(--color-primary);
-  text-decoration: underline;
-}
+  /* 現在表示中 */
+  &:target-current {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
 
-/* スクロールの「後」（未到達） */
-.nav__link:target-after {
-  color: var(--color-secondary);
+  /* スクロールの「後」（未到達） */
+  &:target-after {
+    color: var(--color-secondary);
+  }
 }
 
 .main {
