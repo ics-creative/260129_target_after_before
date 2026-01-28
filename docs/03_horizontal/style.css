@@ -51,7 +51,7 @@ body {
     border-bottom: 1px solid var(--color-border);
   }
 
-  /* スクロールの「後」（未到達） */
+  /* スクロール未到達 */
   &:has(.nav__link:target-after) {
     border-bottom: 1px solid var(--color-border);
   }
@@ -63,7 +63,7 @@ body {
   font-size: 16px;
   padding: 4px 16px;
 
-  /* スクロールの「前」（通過済み） */
+  /* スクロール通過済み */
   &:target-before {
     color: var(--color-text-muted);
   }

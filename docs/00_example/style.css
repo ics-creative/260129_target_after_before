@@ -19,7 +19,7 @@ body {
   display: grid;
   gap: 12px;
 
-  /* スクロールの「前」（通過済み） */
+  /* スクロール通過済み */
   & a:target-before {
     color: #999;
   }
@@ -30,7 +30,7 @@ body {
     font-weight: bold;
   }
 
-  /* スクロールの「後」（未到達） */
+  /* スクロール未到達 */
   & a:target-after {
     color: #333;
   }

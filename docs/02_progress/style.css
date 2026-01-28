@@ -44,7 +44,7 @@
   padding-bottom: 36px;
   color: var(--color-text);
 
-  /* スクロールの「前」（通過済み） */
+  /* スクロール通過済み */
   &:target-before {
     color: var(--color-text-muted);
 
@@ -72,7 +72,7 @@
     }
   }
 
-  /* スクロールの「後」（未到達） */
+  /* スクロール未到達 */
   &:target-after {
     color: var(--color-text);
   }
