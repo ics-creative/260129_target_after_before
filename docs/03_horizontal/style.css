@@ -22,6 +22,7 @@ body {
   scroll-target-group: auto;
 
   &::after {
+    /* バスのアイコンを表示 */
     content: "";
     position: absolute;
     top: anchor(top);
@@ -53,17 +54,23 @@ body {
   padding: 4px 16px;
 }
 
-.nav__link:target-current {
-  color: var(--color-primary);
-  anchor-name: --current-city;
-}
-
+/* スクロールの「前」（通過済み） */
 .nav__link:target-before {
   color: var(--color-text-muted);
 }
+
+/* 現在表示中 */
+.nav__link:target-current {
+  color: var(--color-primary);
+  /* 現在表示中の要素をアンカーとして指定。バスのアイコンを移動させる */
+  anchor-name: --current-city;
+}
+
 .nav__item:has(.nav__link:target-current) {
   border-bottom: 1px solid var(--color-border);
 }
+
+/* スクロールの「後」（未到達） */
 .nav__item:has(.nav__link:target-after) {
   border-bottom: 1px solid var(--color-border);
 }
