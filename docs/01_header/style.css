@@ -15,7 +15,7 @@
   gap: 32px;
   list-style: none;
   padding: 16px 0;
-  /* scroll-target-groupプロパティをナビゲーションのリストに設定することで、ブラウザがスクロール位置に基づいて:target-current、:target-before、:target-after疑似クラスを自動的に判定します。 */
+  /* scroll-target-groupプロパティを設定 */
   scroll-target-group: auto;
 }
 
