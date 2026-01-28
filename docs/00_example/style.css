@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100vh;
+  padding: 24px;
+  border-right: 1px solid var(--color-border);
+}
+
+.list {
+  /* スクロールマーカーグループコンテナーの設定 */
+  scroll-target-group: auto;
+  display: grid;
+  gap: 12px;
+}
+
+/* スクロールの「前」（通過済み） */
+.list a:target-before {
+  color: #999;
+}
+
+/* 現在表示中 */
+.list a:target-current {
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* スクロールの「後」（未到達） */
+.list a:target-after {
+  color: #333;
+}
+
+.main {
+  margin-left: 150px;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.section__title {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
