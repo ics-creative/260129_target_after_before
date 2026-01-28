@@ -85,13 +85,11 @@
 /* 現在表示中 */
 .progress__link:target-current {
   color: var(--color-primary);
-  font-weight: bold;
 
   > .progress__badge {
     background-color: var(--color-primary);
     color: var(--color-white);
     border-color: transparent;
-    font-weight: normal;
   }
 }
 

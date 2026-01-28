@@ -32,14 +32,14 @@
 }
 
 /* スクロールの「前」（通過済み） */
-.nav__link:target-current {
-  color: var(--color-primary);
-  text-decoration: underline;
+.nav__link:target-before {
+  color: var(--color-text-muted);
 }
 
 /* 現在表示中 */
-.nav__link:target-before {
-  color: var(--color-text-muted);
+.nav__link:target-current {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 /* スクロールの「後」（未到達） */
