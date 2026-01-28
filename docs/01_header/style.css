@@ -31,16 +31,18 @@
     text-decoration 0.3s;
 }
 
-/* :target-* 疑似クラス */
+/* スクロールの「前」（通過済み） */
 .nav__link:target-current {
   color: var(--color-primary);
   text-decoration: underline;
 }
 
+/* 現在表示中 */
 .nav__link:target-before {
   color: var(--color-text-muted);
 }
 
+/* スクロールの「後」（未到達） */
 .nav__link:target-after {
   color: var(--color-secondary);
 }
