@@ -4,7 +4,6 @@ body {
 
 .nav {
   width: 100%;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -34,7 +33,7 @@ body {
       right 0.3s,
       width 0.3s;
     z-index: -1;
-    background-image: url("../images/travel.svg");
+    background-image: url("../images/bus.svg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
@@ -85,7 +84,7 @@ body {
   min-width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 40% 60%;
   align-items: center;
   scroll-snap-align: start;
 }
@@ -102,31 +101,26 @@ body {
 }
 
 .city__content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 0 24px;
+  padding: 40px;
   width: 100%;
 }
 
 .city__name {
-  font-size: 64px;
+  font-size: 24px;
   font-weight: bold;
-  color: var(--color-primary);
-  line-height: 1.1;
-  letter-spacing: -2px;
-}
-
-.city__country {
-  font-size: 18px;
-  color: var(--color-secondary);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: -0.05rem;
+  margin-bottom: 16px;
 }
 
 .city__description {
-  font-size: 18px;
-  color: var(--color-text);
+  font-size: 14px;
   line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.city__schedule {
+  font-size: 16px;
+  line-height: 1.8;
+  display: grid;
+  gap: 8px;
 }
