@@ -49,14 +49,14 @@
     color: var(--color-text-muted);
 
     /* ✔️アイコンを表示 */
-    > .progress__text::after {
+    .progress__text::after {
       content: "✔️";
       position: absolute;
       top: 0;
       right: -18px;
     }
 
-    > .progress__badge {
+    .progress__badge {
       color: var(--color-text-muted);
     }
   }
@@ -65,7 +65,7 @@
   &:target-current {
     color: var(--color-primary);
 
-    > .progress__badge {
+    .progress__badge {
       background-color: var(--color-primary);
       color: var(--color-white);
       border-color: transparent;
@@ -130,7 +130,7 @@
   gap: 4px;
   font-size: 14px;
 
-  > li {
+  li {
     list-style: disc;
     margin-left: 16px;
   }

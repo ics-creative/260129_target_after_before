@@ -20,18 +20,18 @@ body {
   gap: 12px;
 
   /* スクロール通過済み */
-  & a:target-before {
+  a:target-before {
     color: #999;
   }
 
   /* 現在表示中 */
-  & a:target-current {
+  a:target-current {
     color: #0066cc;
     font-weight: bold;
   }
 
   /* スクロール未到達 */
-  & a:target-after {
+  a:target-after {
     color: #333;
   }
 }
