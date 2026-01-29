@@ -14,23 +14,22 @@ body {
 }
 
 .list {
-  /* グループ化 */
   scroll-target-group: auto;
   display: grid;
   gap: 12px;
 
-  /* スクロール通過済み */
+  /* スクロール通過済み: 薄いグレー */
   a:target-before {
     color: #999;
   }
 
-  /* 現在表示中 */
+  /* 現在表示中: 強調表示 */
   a:target-current {
     color: #0066cc;
     font-weight: bold;
   }
 
-  /* スクロール未到達 */
+  /* スクロール未到達: 濃いグレー */
   a:target-after {
     color: #333;
   }
