@@ -4,12 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
     "fix": "biome check --write ."
-  },
-  "dependencies": {
-    "vite": "^6.2.0"
   }
 }

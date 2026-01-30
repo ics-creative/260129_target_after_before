@@ -34,7 +34,8 @@
 }
 
 .progress__link {
-  display: flex;
+  display: grid;
+  grid-template-columns: 54px auto;
   align-items: center;
   gap: 12px;
   text-decoration: none;
@@ -85,6 +86,7 @@
   font-size: 12px;
   padding: 2px 6px;
   color: var(--color-text);
+  text-align: center;
 }
 
 .progress__text {
@@ -93,6 +95,7 @@
   align-items: center;
   font-size: 14px;
   position: relative;
+  width: fit-content;
 }
 
 .progress__time {
@@ -177,4 +180,36 @@
 .recipe-step__item {
   list-style: decimal;
   margin-left: 16px;
+}
+
+@media (max-width: 840px) {
+  .recipe-layout {
+    grid-template-columns: 140px 1fr;
+  }
+
+  .progress__item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      left: 10px;
+    }
+  }
+
+  .progress__link {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding-bottom: 24px;
+  }
+
+  .progress__text {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 16px;
+  }
+
+  .recipe-step__title {
+    flex-direction: column;
+    gap: 6px;
+  }
 }

@@ -132,3 +132,27 @@ body {
   display: grid;
   gap: 8px;
 }
+
+@media (max-width: 640px) {
+  .nav {
+    padding: 24px;
+  }
+  .nav__list {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 8px;
+  }
+  .city {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    align-items: start;
+  }
+  .city__content {
+    padding: 24px;
+  }
+  .city__image {
+    object-fit: contain;
+  }
+  .city__description {
+    margin-bottom: 24px;
+  }
+}
