@@ -34,7 +34,7 @@
     color 0.3s,
     text-decoration 0.3s;
 
-  /* スクロール通過済み */
+  /* スクロール通過ずみ */
   &:target-before {
     color: var(--color-text-muted);
   }

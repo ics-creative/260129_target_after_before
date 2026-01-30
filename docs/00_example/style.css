@@ -18,7 +18,7 @@ body {
   display: grid;
   gap: 12px;
 
-  /* スクロール通過済み: 薄いグレー */
+  /* スクロール通過ずみ: 薄いグレー */
   a:target-before {
     color: #999;
   }

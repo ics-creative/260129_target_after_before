@@ -63,7 +63,7 @@ body {
   font-size: 16px;
   padding: 4px 16px;
 
-  /* スクロール通過済み */
+  /* スクロール通過ずみ */
   &:target-before {
     color: var(--color-text-muted);
   }

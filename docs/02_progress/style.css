@@ -45,7 +45,7 @@
   padding-bottom: 36px;
   color: var(--color-text);
 
-  /* スクロール通過済み */
+  /* スクロール通過ずみ */
   &:target-before {
     color: var(--color-text-muted);
 
