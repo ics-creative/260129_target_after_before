@@ -35,7 +35,7 @@
 
 .progress__link {
   display: grid;
-  grid-template-columns: 54px auto;
+  grid-template-columns: 58px auto;
   align-items: center;
   gap: 12px;
   text-decoration: none;
@@ -84,7 +84,7 @@
   border: 1px solid var(--color-border);
   background-color: var(--color-white);
   font-size: 12px;
-  padding: 2px 6px;
+  padding: 2px 0;
   color: var(--color-text);
   text-align: center;
 }

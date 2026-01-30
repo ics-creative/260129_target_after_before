@@ -1,4 +1,4 @@
-ICS MEDIA『JS不要で進捗UIが作れるCSSの:target-afterと:target-before』のサンプルコードです。
+ICS MEDIA『[スクロール連動UIはCSSだけで作れる！疑似クラス:target-current/before/afterが便利](https://ics.media/entry/260130/)』のサンプルコードです。
 
 以下のURLからデモを確認できます。
 
